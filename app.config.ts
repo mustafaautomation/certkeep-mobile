@@ -16,7 +16,7 @@ const config: ExpoConfig = {
   android: {
     package: 'com.quvantic.certkeep',
     adaptiveIcon: {
-      backgroundColor: '#0F6B66',
+      backgroundColor: '#1E4D38',
       foregroundImage: './assets/android-icon-foreground.png',
       backgroundImage: './assets/android-icon-background.png',
       monochromeImage: './assets/android-icon-monochrome.png',
@@ -40,7 +40,14 @@ const config: ExpoConfig = {
     'expo-router',
     'expo-font',
     'expo-asset',
-    'expo-splash-screen',
+    [
+      'expo-splash-screen',
+      {
+        backgroundColor: '#1E4D38',
+        image: './assets/splash-icon.png',
+        imageWidth: 96,
+      },
+    ],
     [
       'expo-notifications',
       {

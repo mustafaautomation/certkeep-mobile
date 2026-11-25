@@ -30,3 +30,9 @@ Checks run locally on 2026-11-25 (Node 22.23.4, the CI version; npm install was 
 Note: under heavy machine load the first cold Jest run timed out on the first component test of a few suites (default 5s timeout while modules transform); a warm re-run passes. Not a code problem, but CI on a cold cache could be slow on that first test.
 
 Still missing / needs a person: real app icons; Maestro flows not run; Apple/Google/Expo accounts, Supabase project, APNs/FCM, DNS. No EAS build was run.
+
+## App icons (Claude, 2026-11-25)
+
+- Replaced the stock Expo placeholders in `assets/` with real Certkeep icons, rendered by the new `scripts/generate-icon.mjs` (plain Node, no dependencies, same approach as stamply-mobile) from the web app's `certkeep/app/icon.svg` (cream document with folded corner and green check on #1E4D38). Outputs: icon (1024, full-bleed), splash-icon (glyph only), favicon (48, rounded tile), Android adaptive background/foreground/monochrome (glyph at 72%; the fold and check are cut-outs in the monochrome icon).
+- `app.config.ts`: adaptive-icon background changed from the in-app teal #0F6B66 to the logo colour #1E4D38; `expo-splash-screen` had no options (so the splash image was never used) and now gets backgroundColor #1E4D38, image `./assets/splash-icon.png`, imageWidth 96. Notification tint left as is.
+- Checks: lint pass, typecheck pass, jest 3 suites / 14 tests pass, `expo config` resolves.
