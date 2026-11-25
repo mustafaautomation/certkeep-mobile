@@ -1,0 +1,30 @@
+appId: com.quvantic.certkeep
+---
+- launchApp
+- tapOn:
+    id: try-demo
+- assertVisible: Harborline Construction
+- assertVisible: Expiring
+- tapOn:
+    id: filter-missing
+- tapOn:
+    id: requirement-req_harrow_gl
+- tapOn:
+    id: add-document
+- tapOn:
+    id: capture-sample
+- assertVisible: Confirm the reading
+- tapOn:
+    id: capture-submit
+- assertVisible: Compliant
+- tapOn:
+    id: tab-directory
+- assertVisible: Northstar Electric
+- tapOn: Northstar Electric
+- assertVisible: Electrical
+- tapOn:
+    id: tab-alerts
+- assertVisible: Expiry alerts
+- tapOn:
+    id: arm-reminders
+- assertVisible: reminder

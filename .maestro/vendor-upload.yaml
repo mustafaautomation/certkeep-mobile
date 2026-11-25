@@ -1,0 +1,16 @@
+appId: com.quvantic.certkeep
+---
+- launchApp
+- tapOn: Priya Shah · Vendor
+- tapOn:
+    id: sign-in-submit
+- assertVisible: Electrical license
+- tapOn: Electrical license
+- tapOn:
+    id: add-document
+- tapOn:
+    id: capture-sample
+- assertVisible: Confirm the reading
+- tapOn:
+    id: capture-submit
+- assertVisible: Compliant

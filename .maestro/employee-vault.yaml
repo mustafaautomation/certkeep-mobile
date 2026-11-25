@@ -1,0 +1,13 @@
+appId: com.quvantic.certkeep
+---
+- launchApp
+- tapOn: Leo Park · Employee
+- tapOn:
+    id: sign-in-submit
+- assertVisible: OSHA 10 card
+- assertNotVisible: Northstar Electric
+- assertNotVisible:
+    id: tab-directory
+- tapOn:
+    id: tab-alerts
+- assertVisible: Expiry alerts
