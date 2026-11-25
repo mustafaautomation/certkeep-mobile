@@ -47,3 +47,8 @@ blob-report/
 # generated native folders
 /ios
 /android
+
+# env files (keep the example)
+.env
+.env.*
+!.env.example

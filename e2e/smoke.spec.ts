@@ -11,7 +11,7 @@ test('compliance manager reviews the vault and files a missing COI', async ({ pa
 
   await page.getByTestId('filter-missing').click();
   await page.getByTestId('requirement-req_harrow_gl').click();
-  await expect(page.getByText('Harrow Hauling')).toBeVisible();
+  await expect(page.getByText('Harrow Hauling').filter({ visible: true })).toBeVisible();
   await page.getByTestId('add-document').click();
   await page.getByTestId('capture-sample').click();
   await expect(page.getByTestId('field-number')).toBeVisible();
